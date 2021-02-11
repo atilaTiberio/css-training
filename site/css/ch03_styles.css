@@ -1,0 +1,100 @@
+/*Universal solution to override the default box-model  (content-box)
+
+*/
+:root {
+    box-sizing: border-box;
+}
+*,
+::before,
+::after {
+    box-sizing: inherit;
+
+}
+
+body{
+    background-color: #eee;
+    font-family: Helvetica, Arial, sans-serif;
+}
+header {
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+}
+header > h1 {
+    padding: 0.25em;
+}
+
+main {
+    display: block;
+}
+
+/*Float based*/
+.columns {
+    padding-bottom: 100px;
+    height: 25vh;
+}
+
+.main {
+    float: left;
+    width: 70%;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+/*gutter will work reducing width, we need to set columgs with the same height*/
+.sidebar {
+    float: left;
+    width: calc(30% - 1.5em); /*no we have space for our margin*/
+    margin-left: 1.5em;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+
+}
+
+/*This wrappe will remove with negative margins the left and right side of border-spacing*/
+
+.wrapper_nofloat {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+}
+
+.container_nofloat {
+    display: table;
+    width: 100%;
+    /*This is applied to all the borders and we don't want it so we're creating a wrapper this solution is not the best*/
+    border-spacing: 1.5em 0;
+
+}
+
+.main_nofloat {
+    display: table-cell;
+    width: 70%;
+    background-color: #fff;
+    border-radius: .5em;
+}
+/*gutter will work reducing width, we need to set columgs with the same height*/
+.sidebar_nofloat {
+    display: table-cell;
+    width: calc(30% - 1.5em); /*no we have space for our margin*/
+    margin-left: 1.5em; /*Margin doesn't work with table-cell we will need a wrapper*/
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+.container_flexbox {
+    display: flex;
+}
+.main_flexbox {
+    width: 70%;
+    background-color: #fff;
+    border-radius: .5em;
+}
+.sidebar_flexbox {
+    width: 30%;
+    padding: 1.5em;
+    margin-left: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}

@@ -1,0 +1,91 @@
+/* we should create styles considering the lower specificity*/
+
+body {
+    font-family: sans-serif;
+}
+
+
+h1 {
+    color: #2f4f4f;
+    margin-bottom: 10px; /* reduces space between wombat text and nav links*/
+
+}
+
+.nav {
+    margin-top: 10px; /*Margin the space with other elements*/
+    list-style: none; /* removes the dots before li */
+    padding-left: 0; /* removes default paddinf left of li */
+
+}
+
+.nav li {
+    display: inline-block;  /* shows all the li in a single row*/
+}
+
+/* specificity 0,1,1*/
+.nav a {
+    color: white; /* text color */
+    background-color: #13a4a4;
+    padding: 5px 15px;  /* from the inside to the outside, all padding*/
+    border-radius:  5px; /* as its name says, the border of the element*/
+    text-decoration: none; /*  removes underline of the link */
+
+}
+
+/* specificity 0,2,0 */
+.nav .featured  {
+    background-color: orange ;
+    box-shadow: 10px 5px #6f9090; /* 10px right 5px down*/
+}
+
+
+.footer {
+    color: #666;
+    background-color: #ccc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/*specificity 0,1,1 the last style that appears will win to any other previous style, Source Order
+a.featured {
+    background-color: orange;
+}
+
+To reset default values: initial , auto
+
+Text:
+color, font, font-family, font-size, font-weight, font-variant, font-style, line-height, letter-spacing, text-align, text-indent, text-transform
+white-space and word-spacing
+
+list props:
+list-style, list-style-type, list-style-position, list-style-image
+
+table props:
+border-collapse
+border-spacing
+
+shorthand properties
+
+font: italic bold 18px/1.2 "Helvetica", "Arial", sans-serif;
+previous line will the same to set every property
+font-style: italic
+font-weight: bold
+font-size: 18px
+line-height:1.2
+font-family: "Helvetica", "Arial", sans-serif
+
+background: background-color, background-image, background-size, background-repeat, background-position, background-origin, background-chip,
+background-attachment
+
+ */
+
+
+
+
+

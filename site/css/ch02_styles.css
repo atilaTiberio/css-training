@@ -1,0 +1,43 @@
+.padded {
+    font-size: 16px;
+    padding: 1em;
+    /*
+        relativamente tomara el valor de 16px 2em=32px
+        ems can be convinient when setting properties like padding, height, width, border-radius
+        ems takes inherited values of any other font-size
+    */
+
+}
+
+.box {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: lightgray;
+}
+
+.box-small {
+    font-size: 12px;
+}
+.box-large {
+    font-size: calc(0.5em + 1vw);
+}
+
+/*
+    si le pongo a un div class="box box-small" el 1em tomara 12px
+    si le pongo a un div class="box box-large" el 1em tomará 18px
+
+    if parent font-size is 12px and you want 16px then  16/12= 1.3333em
+
+    body {
+        font-size: 16px
+    }
+    .slogan {
+        font-size: 1.2em evaluates to 19.2px this will be the new local size
+        padding: 1.2em it will take 19.2 to compute its value to 23.04px
+    }
+
+    rem -> root em
+    viewport units
+    1vw, 1vh
+    vmax, vmin
+*/
