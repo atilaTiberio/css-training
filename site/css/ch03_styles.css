@@ -11,6 +11,12 @@
 
 }
 
+body * + * {
+    margin-top: 1.5em;
+    /*This will fix the margin top of the become sponsor link. You will need to review your requirements to use this
+    Lobotomized owl */
+}
+
 body{
     background-color: #eee;
     font-family: Helvetica, Arial, sans-serif;
@@ -90,11 +96,30 @@ main {
     width: 70%;
     background-color: #fff;
     border-radius: .5em;
+    padding:1em 1.5em;
 }
 .sidebar_flexbox {
     width: 30%;
     padding: 1.5em;
+    margin-top: 0; /*This will override body * + * margin-top style  */
     margin-left: 1.5em;
     background-color: #fff;
     border-radius: .5em;
+}
+
+.button-link {
+    display: block; /*This will take available width*/
+    padding: .5em;
+    color: #fff;
+    background-color: #0090C9;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sponsor-link {
+    display: block;
+    color: #0072b0;
+    font-weight: bold;
+    text-decoration: none;
 }
